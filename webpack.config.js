@@ -18,7 +18,7 @@ const fileRules = {
 
 // Pretty standard babel configurations for modern react apps
 const jsRules = {
-  test: /\.jsx?$/,
+  test: /\.(js|jsx)$/,
   exclude: /node_modules/,
   use: {
     loader: 'babel-loader',
@@ -45,6 +45,13 @@ module.exports = {
   // will be provided by the Component Consumer, like an Application
   externals: ['react', 'react-dom', 'styled-components'],
   module: {
-    rules: [jsRules, fileRules]
+    rules: [
+      jsRules,
+      fileRules,
+      {
+        test: /\.html$/i,
+        loader: 'html-loader'
+      }
+    ]
   }
 }
