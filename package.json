@@ -1,10 +1,17 @@
 {
-  "name": "react-neonui",
-  "version": "1.0.0",
+  "name": "react-neon-ui",
+  "version": "1.0.6",
   "description": "A react component library",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server --open --mode development",
     "test:lint": "eslint .",
     "storybook": "start-storybook -p 6006",
@@ -35,19 +42,20 @@
     "eslint-plugin-standard": "^4.0.1",
     "html-loader": "^1.3.2",
     "prettier": "^2.1.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-is": "^17.0.0",
+    "styled-components": "^5.2.0",
     "themeprovider-storybook": "^1.6.4",
+    "url-loader": "^4.1.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.2"
   },
-  "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^17.0.0",
-    "styled-components": "^5.2.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
-    "react": "^16.14.0",
+    "react": "^16.0.0",
     "react-dom": "^17.0.0",
     "styled-components": "^5.2.0"
   }
