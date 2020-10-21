@@ -18,7 +18,11 @@ For Yarn users:
 import React from 'react'
 import { Buttom } from 'react-neon-ui'
 
-const App = () => <div></div>
+const App = () => (
+  <div>
+    <Button>Click Here</Button>
+  </div>
+)
 
 export default App
 ```
