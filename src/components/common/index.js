@@ -13,9 +13,9 @@ export const fontSizes = {
 }
 
 export const borderSizes = {
-  small: '2px',
-  medium: '3px',
-  large: '4px'
+  small: '1.2px',
+  medium: '1.5px',
+  large: '2px'
 }
 
 export const fonts = css`
