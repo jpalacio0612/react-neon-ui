@@ -26,7 +26,7 @@ TextInput.propTypes = {
 }
 
 TextInput.defaultProps = {
-  onChange: null,
+  onChange: () => {},
   variant: 'primary',
   size: 'medium',
   placeholder: ''
