@@ -10,6 +10,11 @@ export default {
 const FormattedTemplate = () => (
   <div>
     <NumberInput
+      value='1000000'
+      style={{ margin: '10px' }}
+      onChange={action('Primary Changed')}
+    />
+    <NumberInput
       value='1,000,000'
       style={{ margin: '10px' }}
       formatted
