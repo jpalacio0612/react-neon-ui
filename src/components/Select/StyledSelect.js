@@ -1,31 +1,72 @@
 import styled from 'styled-components'
-import { fontSizes, borderSizes, boxSizes, fonts } from '../common'
+import { fontSizes, borderSizes, fonts, boxSizes } from '../common'
 import { neon } from '../../themes'
 
-export const StyledSelect = styled.select`
+export const ButtonSelect = styled.button`
   ${fonts}
   border: ${({ size, theme, variant }) =>
     `${borderSizes[size]} solid ${theme.bordercolor[variant].on}`};
-  color: ${({ theme, variant }) => theme.textcolor[variant].on};
   font-family: ${({ theme }) => theme.fontFamily.name};
   font-size: ${({ size }) => fontSizes[size]};
+  color: ${({ theme, variant }) => theme.textcolor[variant].on};
   height: ${({ size }) => boxSizes[size]};
-  background: transparent;
-  outline: none;
-  border-radius: 5px;
-  padding: 0 20px;
+  word-spacing: 2px;
+  min-width: 160px;
+  background-color: transparent;
   transition: 500ms;
   &:hover {
+    text-shadow: ${({ theme, variant }) =>
+      `0px 0px 8px ${theme.textcolor[variant].blur}`};
     box-shadow: ${({ theme, variant }) =>
       `0px 0px 31px 0px ${theme.bordercolor[variant].blur}`};
-    text-shadow: ${({ theme, variant }) =>
-      `0px 0px 2px ${theme.textcolor[variant].blur}`};
   }
-  & option {
-    background-color: #282c34;
+`
+
+export const ContentSelect = styled.div`
+  border: ${({ size, theme, variant }) =>
+    `${borderSizes[size]} solid ${theme.bordercolor[variant].on}`};
+  border-top: none;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  & button {
+    ${fonts}
+    font-family: ${({ theme }) => theme.fontFamily.name};
+    font-size: ${({ size }) => fontSizes[size]};
+    color: ${({ theme, variant }) => theme.textcolor[variant].off};
+    height: ${({ size }) => boxSizes[size]};
+    border: none;
+    border-radius: 5px;
+    word-spacing: 2px;
+    background-color: transparent;
+    transition: 500ms;
+    &:hover {
+      color: ${({ theme, variant }) => theme.textcolor[variant].on};
+      text-shadow: ${({ theme, variant }) =>
+        `0px 0px 8px ${theme.textcolor[variant].blur}`};
+      box-shadow: ${({ theme, variant }) =>
+        `0px 0px 31px 0px ${theme.bordercolor[variant].blur}`};
+    }
+  }
+`
+
+export const StyledSelect = styled.div`
+  position: relative;
+  display: inline-block;
+  &:hover ${ContentSelect} {
+    display: flex;
+    flex-direction: column;
   }
 `
 
 StyledSelect.defaultProps = {
+  theme: neon
+}
+
+ButtonSelect.defaultProps = {
+  theme: neon
+}
+
+ContentSelect.defaultProps = {
   theme: neon
 }

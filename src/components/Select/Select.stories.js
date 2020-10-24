@@ -9,14 +9,14 @@ export default {
 const VariantsTemplate = () => (
   <div>
     <Select
-      style={{ margin: '10px' }}
-      value='primary'
+      style={{ margin: '0 10px' }}
+      label='Select variant'
       options={['primary', 'secondary']}
     />
     <Select
-      style={{ margin: '10px' }}
+      style={{ margin: '0 10px' }}
       variant='secondary'
-      value='secondary'
+      label='Select variant'
       options={['primary', 'secondary']}
     />
   </div>
@@ -25,25 +25,41 @@ const VariantsTemplate = () => (
 const SizesTemplate = () => (
   <div>
     <Select
-      style={{ margin: '10px' }}
+      style={{ margin: '0 10px' }}
       size='small'
-      value='small'
+      label='small'
       options={['small', 'medium', 'large']}
     />
     <Select
-      style={{ margin: '10px' }}
+      style={{ margin: '0 10px' }}
       size='medium'
-      value='medium'
+      label='medium'
       options={['small', 'medium', 'large']}
     />
     <Select
-      style={{ margin: '10px' }}
+      style={{ margin: '0 10px' }}
       size='large'
-      value='large'
+      label='large'
       options={['small', 'medium', 'large']}
     />
   </div>
 )
 
+const MultiSelectTemplate = () => (
+  <div>
+    <Select
+      style={{ margin: '0 10px' }}
+      label='Multi Select'
+      options={['primary', 'secondary']}
+      multiple
+    />
+    <Select
+      style={{ margin: '0 10px' }}
+      label='Single Select'
+      options={['primary', 'secondary']}
+    />
+  </div>
+)
 export const Variants = VariantsTemplate.bind({})
 export const Sizes = SizesTemplate.bind({})
+export const MultiSelect = MultiSelectTemplate.bind({})
