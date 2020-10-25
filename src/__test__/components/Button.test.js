@@ -1,16 +1,19 @@
 import React from 'react'
 import { Button } from '../../components/Button'
-import { shallow } from 'enzyme'
+import { render, fireEvent, cleanup } from '@testing-library/react'
 
 describe('<Button />', () => {
-  test('Button should be rendered', () => {
-    const button = shallow(<Button />)
-    expect(button.length).toEqual(1)
+  afterEach(cleanup)
+
+  test('button renders with correct children', () => {
+    const { queryByText } = render(<Button>Click me</Button>)
+    expect(queryByText('Click me')).toBeTruthy()
   })
+
   test('OnClick handle properly', () => {
-    const mockCallBack = jest.fn()
-    const button = shallow(<Button onClick={mockCallBack}>Ok!</Button>)
-    button.simulate('click')
-    expect(mockCallBack.mock.calls.length).toEqual(1)
+    const onClick = jest.fn()
+    const { getByText } = render(<Button onClick={onClick}>Click me</Button>)
+    fireEvent.click(getByText('Click me'))
+    expect(onClick).toHaveBeenCalled()
   })
 })

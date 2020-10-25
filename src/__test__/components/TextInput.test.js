@@ -1,17 +1,20 @@
 import React from 'react'
-import { TextInput } from '../../components/TextInput'
-import { shallow } from 'enzyme'
+
+import { render, fireEvent, cleanup } from '@testing-library/react'
+import { TextInput } from '../../components/TextInput/TextInput'
 
 describe('<TextInput />', () => {
-  test('TextInput should be rendered', () => {
-    const textInput = shallow(<TextInput />)
-    expect(textInput.length).toEqual(1)
+  afterEach(cleanup)
+
+  test('textinput renders with placeholder', () => {
+    const { queryByPlaceholderText } = render(<TextInput placeholder='test' />)
+    expect(queryByPlaceholderText('test')).toBeTruthy()
   })
-  test('should call onChange prop', () => {
-    const onChangeMock = jest.fn()
-    const event = 'Only for test'
-    const textInput = shallow(<TextInput onChange={onChangeMock} />)
-    textInput.simulate('change', event)
-    expect(onChangeMock).toBeCalledWith('Only for test')
+
+  test('OnChange handle properly', () => {
+    const { queryByPlaceholderText } = render(<TextInput placeholder='test' />)
+    const input = queryByPlaceholderText('test')
+    fireEvent.change(input, { target: { value: 'test' } })
+    expect(input.value).toBe('test')
   })
 })
