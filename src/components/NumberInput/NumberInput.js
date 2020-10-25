@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyledNumberInput } from './StyledNumberInput'
 import PropTypes from 'prop-types'
 import numeral from 'numeral'
 
 export const NumberInput = React.forwardRef(function NumberInput(props, ref) {
   const {
-    children,
     placeholder,
     onChange,
     disabled,
@@ -15,6 +14,15 @@ export const NumberInput = React.forwardRef(function NumberInput(props, ref) {
   } = props
 
   const [newvalue, setNewValue] = useState(value)
+
+  useEffect(() => {
+    const e = {
+      target: {
+        value: newvalue
+      }
+    }
+    onChange(e)
+  }, [newvalue])
 
   const formatter = (value) => {
     value = value.replace(/\D/g, '')
@@ -31,13 +39,7 @@ export const NumberInput = React.forwardRef(function NumberInput(props, ref) {
     }
   }
 
-  const handleInputChange = async (e) => {
-    const value = await formatter(e.target.value)
-    setNewValue(value)
-    if (onChange) {
-      onChange(e)
-    }
-  }
+  const handleInputChange = (e) => setNewValue(formatter(e.target.value))
 
   return (
     <>
@@ -63,7 +65,7 @@ NumberInput.propTypes = {
 }
 
 NumberInput.defaultProps = {
-  onChange: null,
+  onChange: () => {},
   variant: 'primary',
   size: 'medium',
   placeholder: '',

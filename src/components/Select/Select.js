@@ -20,7 +20,7 @@ export const Select = React.forwardRef(function Select(props, ref) {
     setNewLabel(choices || label)
   }, [choices, label])
 
-  const handleMultiple = async (event) => {
+  const handleMultiple = (event) => {
     if (!choices.includes(event.target.value)) {
       choices === ''
         ? setChoices(event.target.value)

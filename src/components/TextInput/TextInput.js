@@ -12,9 +12,7 @@ export const TextInput = React.forwardRef(function TextInput(props, ref) {
       isDisabled={disabled}
       ref={ref}
       {...otherProps}
-    >
-      {children}
-    </StyledTextInput>
+    />
   )
 })
 
