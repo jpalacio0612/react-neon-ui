@@ -1,2 +1,6 @@
 export { Button } from './components/Button'
+export { TextInput } from './components/TextInput'
+export { NumberInput } from './components/NumberInput'
+export { Select } from './components/Select'
+export { Autocomplete } from './components/Autocomplete'
 export * from './themes'
