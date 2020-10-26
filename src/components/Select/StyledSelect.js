@@ -27,8 +27,6 @@ export const ContentSelect = styled.div`
     `${borderSizes[size]} solid ${theme.bordercolor[variant].on}`};
   border-top: none;
   display: none;
-  position: absolute;
-  z-index: 1;
   & button {
     ${fonts}
     font-family: ${({ theme }) => theme.fontFamily.name};

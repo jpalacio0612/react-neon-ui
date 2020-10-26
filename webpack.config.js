@@ -43,7 +43,7 @@ module.exports = {
   // Manually tell webpack about our "peerDependencies"
   // that should not be included in the final bundle and
   // will be provided by the Component Consumer, like an Application
-  externals: ['react', 'react-dom', 'styled-components'],
+  externals: ['react', 'react-dom', 'styled-components', 'numeral'],
   module: {
     rules: [
       jsRules,
