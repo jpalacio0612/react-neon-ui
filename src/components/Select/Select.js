@@ -49,6 +49,7 @@ export const Select = React.forwardRef(function Select(props, ref) {
       <ContentSelect {...otherProps}>
         {options.map((option, index) => (
           <ButtonSelect
+            {...otherProps}
             key={index}
             value={option}
             onClick={multiple ? handleMultiple : handleSingle}
