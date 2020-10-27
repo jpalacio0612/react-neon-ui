@@ -1,3 +1,9 @@
+# REACT NEON UI
+React componet library based on styled components.
+
+ - License **MIT** 
+ - Latest version **1.0.14**
+
 ## Install
 
 For npm users:
