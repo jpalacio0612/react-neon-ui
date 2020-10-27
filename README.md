@@ -24,6 +24,8 @@ For Yarn users:
 
 [Github Repository](https://github.com/jpalacio0612/react-neon-ui)
 
+[Demo Repository](https://github.com/jpalacio0612/react-neon-ui-demo)
+
 ## Example
 
 ```jsx
