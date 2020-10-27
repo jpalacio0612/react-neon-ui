@@ -48,13 +48,13 @@ export const Select = React.forwardRef(function Select(props, ref) {
       </ButtonSelect>
       <ContentSelect {...otherProps}>
         {options.map((option, index) => (
-          <button
+          <ButtonSelect
             key={index}
             value={option}
             onClick={multiple ? handleMultiple : handleSingle}
           >
             {option}
-          </button>
+          </ButtonSelect>
         ))}
       </ContentSelect>
     </StyledSelect>

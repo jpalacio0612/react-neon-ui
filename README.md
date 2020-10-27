@@ -3,14 +3,20 @@
 For npm users:
 
 ```shell
-  $ npm install react-neon-ui styled-components
+  $ npm install react-neon-ui styled-components numeral
 ```
 
 For Yarn users:
 
 ```shell
-  $ yarn add react-neon-ui styled-components
+  $ yarn add react-neon-ui styled-components numeral
 ```
+
+## Links
+
+[Documentation click here](https://react-neon-ui-demo.vercel.app/)
+
+[Github Repository](https://github.com/jpalacio0612/react-neon-ui)
 
 ## Example
 

@@ -11,8 +11,6 @@ export const Autocomplete = React.forwardRef(function Autocomplete(props, ref) {
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [userInput, setUserInput] = useState('')
 
-  console.log(setUserInput)
-
   useEffect(() => {
     const e = {
       target: {
