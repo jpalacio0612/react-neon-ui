@@ -1,3 +1,9 @@
+# REACT NEON UI
+React componet library based on styled components.
+
+ - License **MIT** 
+ - Latest version **1.0.14**
+
 ## Install
 
 For npm users:
@@ -17,6 +23,8 @@ For Yarn users:
 [Documentation click here](https://react-neon-ui-demo.vercel.app/)
 
 [Github Repository](https://github.com/jpalacio0612/react-neon-ui)
+
+[Demo Repository](https://github.com/jpalacio0612/react-neon-ui-demo)
 
 ## Example
 
