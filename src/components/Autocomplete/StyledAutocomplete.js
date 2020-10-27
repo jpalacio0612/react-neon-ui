@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { fontSizes, borderSizes, fonts, boxSizes } from '../common'
+import { fontSizes, fonts } from '../common'
 import { neon } from '../../themes'
 
 const SelectCss = css`

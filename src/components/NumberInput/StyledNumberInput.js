@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fontSizes, borderSizes, fonts, boxSizes } from '../common'
+import { fontSizes, borderSizes, fonts } from '../common'
 import { neon } from '../../themes'
 
 export const StyledNumberInput = styled.input`

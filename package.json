@@ -1,6 +1,6 @@
 {
   "name": "react-neon-ui",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "A react component library",
   "main": "dist/index.js",
   "source": "src/index.js",
@@ -13,8 +13,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server --open --mode development",
+    "test": "jest --verbose",
     "test:lint": "eslint .",
-    "test:unit": "jest --verbose",
     "test:unit:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

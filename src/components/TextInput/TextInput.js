@@ -3,13 +3,12 @@ import { StyledTextInput } from './StyledTextInput'
 import PropTypes from 'prop-types'
 
 export const TextInput = React.forwardRef(function TextInput(props, ref) {
-  const { children, placeholder, onChange, disabled, ...otherProps } = props
+  const { children, placeholder, onChange, ...otherProps } = props
 
   return (
     <StyledTextInput
       placeholder={placeholder}
-      onChange={disabled ? undefined : onChange}
-      isDisabled={disabled}
+      onChange={onChange}
       ref={ref}
       {...otherProps}
     />

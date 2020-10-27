@@ -6,12 +6,12 @@ import { TextInput } from '../../components/TextInput/TextInput'
 describe('<TextInput />', () => {
   afterEach(cleanup)
 
-  test('textinput renders with placeholder', () => {
+  test('should render correctly with placeholder', () => {
     const { queryByPlaceholderText } = render(<TextInput placeholder='test' />)
     expect(queryByPlaceholderText('test')).toBeTruthy()
   })
 
-  test('OnChange handle properly', () => {
+  test('Onchange should be handled correctly', () => {
     const { queryByPlaceholderText } = render(<TextInput placeholder='test' />)
     const input = queryByPlaceholderText('test')
     fireEvent.change(input, { target: { value: 'test' } })

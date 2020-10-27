@@ -5,14 +5,14 @@ import { NumberInput } from '../../components/NumberInput'
 describe('<NumberInput />', () => {
   afterEach(cleanup)
 
-  test('NumberInput renders with placeholder', () => {
+  test('should render correctly with placeholder', () => {
     const { queryByPlaceholderText } = render(
       <NumberInput placeholder='test' />
     )
     expect(queryByPlaceholderText('test')).toBeTruthy()
   })
 
-  test('OnChange handle properly', () => {
+  test('Onchange should be handled correctly', () => {
     const { queryByPlaceholderText } = render(
       <NumberInput placeholder='test' />
     )
@@ -21,7 +21,7 @@ describe('<NumberInput />', () => {
     expect(input.value).toBe('1234')
   })
 
-  test('Only allow numbers', () => {
+  test('Input should only allow numbers', () => {
     const { queryByPlaceholderText } = render(
       <NumberInput placeholder='test' />
     )
@@ -30,7 +30,16 @@ describe('<NumberInput />', () => {
     expect(input.value).not.toBe('test')
   })
 
-  test('must be formatted as a number', () => {
+  test('should format as a number by default', () => {
+    const { queryByPlaceholderText } = render(
+      <NumberInput formatted placeholder='test' />
+    )
+    const input = queryByPlaceholderText('test')
+    fireEvent.change(input, { target: { value: '1000000' } })
+    expect(input.value).toBe('1,000,000')
+  })
+
+  test('should format as a number', () => {
     const { queryByPlaceholderText } = render(
       <NumberInput formatted='number' placeholder='test' />
     )
@@ -39,7 +48,7 @@ describe('<NumberInput />', () => {
     expect(input.value).toBe('1,000,000')
   })
 
-  test('must be formatted as a currency', () => {
+  test('should format as a currency', () => {
     const { queryByPlaceholderText } = render(
       <NumberInput formatted='currency' placeholder='test' />
     )

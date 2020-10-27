@@ -23,29 +23,8 @@ export const ButtonSelect = styled.button`
 `
 
 export const ContentSelect = styled.div`
-  border: ${({ size, theme, variant }) =>
-    `${borderSizes[size]} solid ${theme.bordercolor[variant].on}`};
   border-top: none;
   display: none;
-  & button {
-    ${fonts}
-    font-family: ${({ theme }) => theme.fontFamily.name};
-    font-size: ${({ size }) => fontSizes[size]};
-    color: ${({ theme, variant }) => theme.textcolor[variant].off};
-    height: ${({ size }) => boxSizes[size]};
-    border: none;
-    border-radius: 5px;
-    word-spacing: 2px;
-    background-color: transparent;
-    transition: 500ms;
-    &:hover {
-      color: ${({ theme, variant }) => theme.textcolor[variant].on};
-      text-shadow: ${({ theme, variant }) =>
-        `0px 0px 8px ${theme.textcolor[variant].blur}`};
-      box-shadow: ${({ theme, variant }) =>
-        `0px 0px 31px 0px ${theme.bordercolor[variant].blur}`};
-    }
-  }
 `
 
 export const StyledSelect = styled.div`
