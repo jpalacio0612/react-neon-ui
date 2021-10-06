@@ -9,13 +9,13 @@ React componet library based on styled components.
 For npm users:
 
 ```shell
-  $ npm install react-neon-ui styled-components numeral
+  $ npm install react-neon-ui styled-components
 ```
 
 For Yarn users:
 
 ```shell
-  $ yarn add react-neon-ui styled-components numeral
+  $ yarn add react-neon-ui styled-components
 ```
 
 ## Links
