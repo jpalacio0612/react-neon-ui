@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { StyledNumberInput } from './StyledNumberInput'
 import PropTypes from 'prop-types'
-import numeral from 'numeral'
 
 export const NumberInput = React.forwardRef(function NumberInput(props, ref) {
   const {
@@ -27,16 +26,13 @@ export const NumberInput = React.forwardRef(function NumberInput(props, ref) {
   const formatter = (value) => {
     value = value.replace(/\D/g, '')
     if (value === '') return ''
+
     if (!formatted) return value
-    const number = numeral(value)
-    switch (formatted) {
-      case 'number':
-        return number.format()
-      case 'currency':
-        return number.format('$0,0')
-      default:
-        return number.format()
-    }
+
+    value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    if (formatted === 'currency') value = value !== '' ? `$${value}` : ''
+
+    return value
   }
 
   const handleInputChange = (e) => setNewValue(formatter(e.target.value))
