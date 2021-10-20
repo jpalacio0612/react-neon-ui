@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-// import { borderSizes } from '../common'
 import { neon } from '../../themes'
 
 const styledCss = css`
