@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StyledTextArea } from './StyledTextArea'
 
-export const TextArea = React.forwardRef(function TextInput(props, ref) {
+export const TextArea = React.forwardRef(function TextArea(props, ref) {
   const { children, placeholder, onChange, ...otherProps } = props
 
   return (
