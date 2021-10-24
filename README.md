@@ -1,8 +1,15 @@
-# REACT NEON UI
-React componet library based on styled components.
+<p align="center">
+  <a href="https://react-neon-ui-demo.vercel.app/">
+    <img src="https://raw.githubusercontent.com/jpalacio0612/react-neon-ui-demo/main/src/assets/logo.png" alt="Chakra logo" width="200" />
+  </a>
+</p>
 
- - License **MIT** 
- - Latest version **1.0.14**
+<h1 align="center">React component library based on styled components 🚀</h1>
+<p align="center">
+  <img alt="MIT License" src="https://img.shields.io/github/license/chakra-ui/chakra-ui"/>
+  <img alt="NPM version" src="https://badgen.net/npm/v/react-neon-ui" />
+</p>
+
 
 ## Install
 
