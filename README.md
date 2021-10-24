@@ -30,7 +30,7 @@ For Yarn users:
 
 ```jsx
 import React from 'react'
-import { Buttom } from 'react-neon-ui'
+import { Button } from 'react-neon-ui'
 
 const App = () => (
   <div>
@@ -48,7 +48,7 @@ We have two default themes "neon" and "cyberpunk" but you can use your custom th
 ```jsx
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Buttom } from 'react-neon-ui'
+import { Button } from 'react-neon-ui'
 import { cyberpunk } from 'react-neon-ui'
 
 const App = () => (
