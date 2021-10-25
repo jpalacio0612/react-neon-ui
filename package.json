@@ -1,6 +1,6 @@
 {
   "name": "react-neon-ui",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "A react component library",
   "main": "dist/index.js",
   "source": "src/index.js",
